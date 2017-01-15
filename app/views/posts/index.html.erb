@@ -1,7 +1,10 @@
 <h1>My Webpage</h1>
 
 <% @posts.each do |post| %>
-  <div class="row">
+  <div>
     <%= post.title %>
     <%= post.body %>
+  </div>
 <% end %>
+
+<%= will_paginate @posts %>
