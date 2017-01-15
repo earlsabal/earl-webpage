@@ -1,0 +1,15 @@
+<% title "Editing #{@post.title}" %>
+ 
+<% form_for(@post) do |form| %>
+  <p>
+    <%= form.label :title %><br/>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :body %><br/>
+    <%= form.text_area :body %>
+  </p>
+ 
+  <%= form.butoon :submit %>
+<% end %>

@@ -41,3 +41,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'simple_form'
 
 gem 'will_paginate'
+
+gem 'devise', '1.1.rc0'
+
+gem 'authlogic'
