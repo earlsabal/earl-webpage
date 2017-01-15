@@ -1,0 +1,7 @@
+<h1>My Webpage</h1>
+
+<% @posts.each do |post| %>
+  <div class="row">
+    <%= post.title %>
+    <%= post.body %>
+<% end %>
