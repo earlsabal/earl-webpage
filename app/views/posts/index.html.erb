@@ -1,13 +1,14 @@
 <h1>My Webpage</h1>
 
 <% @posts.each do |post| %>
-  <div>
-    <%= post.title %>
-    <%= post.body %>
+  <div class="row">
+    <h2><%= link_to (post.title), post_path(post) %></h2>
+    <p>
+      <%= post.body %>
+    </p>
   </div>
 <% end %>
 
-<%= will_paginate @posts %>
 
 <p>
   Admin actions: <%= link_to 'New Post', new_post_path %>

@@ -1,12 +1,14 @@
-<% simple_form_for (@post) do |form| %>
+<h1>Write your new post</h1>
+
+<%= simple_form_for (@post) do |form| %>
   <p>
     <%= form.label :title %><br/>
     <%= form.text_field :title %>
   </p>
  
   <p>
-    <%= form.label :thoughts %><br/>
-    <%= form.text_area :thoughts %>
+    <%= form.label :body %><br/>
+    <%= form.text_area :body %>
   </p>
  
   <%= form.button :submit %>
