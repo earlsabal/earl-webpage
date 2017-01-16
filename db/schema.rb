@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115214530) do
+ActiveRecord::Schema.define(version: 20170116013743) do
+
+  create_table "admin_sessions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admins", force: true do |t|
+    t.string   "login"
+    t.string   "crypted_password",  null: false
+    t.string   "password_salt",     null: false
+    t.string   "persistence_token", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", force: true do |t|
     t.text     "text"
