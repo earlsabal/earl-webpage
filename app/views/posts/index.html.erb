@@ -1,5 +1,7 @@
 <h1>My Webpage</h1>
 
+<%= image_tag("Profile Pic.jpg", size: '240x240') %>
+
 <% @posts.each do |post| %>
   <div class="row">
     <h2><%= link_to (post.title), post_path(post) %></h2>
