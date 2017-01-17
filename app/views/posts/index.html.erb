@@ -1,20 +1,21 @@
-<h1>My Webpage</h1>
+<h1 class="cover-heading">Cover your page.</h1>
+
 
 <%= image_tag("Profile Pic.jpg", size: '240x240') %>
 
-<% @posts.each do |post| %>
-  <div class="row">
-    <h2><%= link_to (post.title), post_path(post) %></h2>
+  <% @posts.each do |post| %>
+    <div class="row">
+      <h2><%= link_to (post.title), post_path(post) %></h2>
+      <p>
+        <%= simple_format(truncate(post.body, length: 20)) %>
+      </p>
+    </div>
+  <% end %>
+
+  <%= will_paginate @comments %>
+
+  <% if current_admin %>
     <p>
-      <%= simple_format(truncate(post.body, length: 20)) %>
+      Admin actions: <%= link_to 'New Post', new_post_path %>
     </p>
-  </div>
-<% end %>
-
-<%= will_paginate @comments %>
-
-<% if current_admin %>
-	<p>
-	  Admin actions: <%= link_to 'New Post', new_post_path %>
-	</p>
-<% end %>
+  <% end %>
