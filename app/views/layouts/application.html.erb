@@ -3,19 +3,29 @@
 <head>
   <%= render "layouts/meta_tags" %>
   <%= render "layouts/flash_msg" %>
-
-  <title>Earl Sabal's Webpage</title>
-
+  <%= render "layouts/cover" %>
 </head>
 <body>
 
+  <div class="site-wrapper">
 
+    <div class="site-wrapper-inner">
+      <div class="cover-container">      
+        <div class="masthead clearfix">
+          <%= render "layouts/navbar" %>
+          <div align= "left"><%= render "layouts/login" %></div>
+        </div>
+       
+        <div class="inner cover">
 
+			<%= yield %>
 
-<%= yield %>
-
- 
-    
+    	</div>
+        <div class="mastfoot">
+        </div>
+      </div>
+    </div>
+  </div> 
 
 
 <%= render "layouts/javascript" %>

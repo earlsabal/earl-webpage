@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang= "en">
-
-<head>
-  <title>Earl Sabal's Webpage</title>
-  <%= render "layouts/cover" %>
-</head>
-
-<body>
-  <h1>My Webpage</h1>
-  <%= render "layouts/cover_layout" %>
+<title>Earl Sabal's Webpage</title>
+<body>  
+	<h1>My Webpage</h1>
+	<p class="lead">
+    	<%= link_to 'My Projects', posts_path,:class => "btn btn-lg btn-default"  %>
+    </p>
 </body>
 
-</html>

@@ -1,8 +1,8 @@
-<div align= "left"><%= render "layouts/login" %></div>
-<%= image_tag("Profile Pic.jpg", size: '240x240') %>
-<%= render "layouts/navbar" %>
+<title>My Projects</title>
 
+<h1>My Projects</h1>
 
+<div class="transbox">
   <% @posts.each do |post| %>
     <div class="row">
       <h2><%= link_to (post.title), post_path(post) %></h2>
@@ -14,11 +14,9 @@
 
   <%= will_paginate @comments %>
 
-  
-
   <% if current_admin %>
     <p>
       Admin actions: <%= link_to 'New Post', new_post_path %>
     </p>
   <% end %>
-
+</div>

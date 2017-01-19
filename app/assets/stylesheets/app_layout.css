@@ -22,8 +22,16 @@ a:hover {
 .post input {
   background-color: black;
 }
+.post textarea {
+  background-color: black;
+}
 
-
+.transbox {
+  margin: 30px;
+  background-color: #000000;
+  border: 1px solid black;
+  opacity: 0.8;
+}
 
 .title {
   display: table;

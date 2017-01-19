@@ -1,7 +1,10 @@
 <nav>
 	<ul class="nav masthead-nav">
-	  <li><%= link_to "Home" , "/home" %></li>
-	  <li><%= link_to "Projects" , posts_path %></li>
-	  <li><a href="#">Contact</a></li>
+	  <li><%= link_to "Home", "/home" %></li>
+	  <li><%= link_to "Projects", posts_path %></li>
+	  <li><%= link_to "About Me/Contact", "/about" %></li>
+	  <% if current_admin %>
+  		<li><%= link_to "Messages", "/about" %></li>
+  	  <% end %>
 	</ul>
 </nav>

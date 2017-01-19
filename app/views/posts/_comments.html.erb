@@ -1,0 +1,15 @@
+<h3>Comments</h3>
+
+<% @post.comments.each do |comment| %>
+  <p>
+    <b>Commenter:</b>
+    <%= comment.author %>
+  </p>
+ 
+  <p>
+    <b>Comment:</b>
+    <%= simple_format comment.text %>
+  </p>
+<% end %>
+
+<%= will_paginate @comments %>

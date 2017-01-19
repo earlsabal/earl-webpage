@@ -1,42 +1,31 @@
 <h2><%= @post.title %></h2>
-<p><%= simple_format @post.body %></p>
+<div class="transbox">
+    <p><%= simple_format @post.body %></p>
 
-	<h3>Comments</h3>
+    <div class="post">
+    <h3>Post Your Comment</h3>
+      <%= simple_form_for([@post, @post.comments.build]) do |f| %>
+        <div class="field">
+          <%= f.label :author %><br />
+          <%= f.text_field :author %>
+        </div>
+        <div class="field">
+          <%= f.label :text %><br />
+          <%= f.text_area :text %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
 
-<% @post.comments.each do |comment| %>
-  <p>
-    <b>Commenter:</b>
-    <%= comment.author %>
-  </p>
- 
-  <p>
-    <b>Comment:</b>
-    <%= simple_format comment.text %>
-  </p>
-<% end %>
-    <%= will_paginate @comments %>
-
-
-
-<h3>Post Your Comment</h3>
-<%= simple_form_for([@post, @post.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :text %><br />
-    <%= f.text_area :text %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-<% if current_admin %>
-  <p>
-    Admin Actions: 
-    <%= link_to 'Edit', edit_post_path(@post) %> 
-    <%= button_to 'Delete', post_path(@post), :method => :delete, :confirm => "Are you sure?" %>
-  </p>
-<% end %>
+    <% if current_admin %>
+      <div class="post">
+        <p>
+          Admin Actions: 
+          <%= link_to 'Edit', edit_post_path(@post) %> 
+          <%= button_to 'Delete', post_path(@post), :method => :delete, :confirm => "Are you sure?" %>
+        </p>
+      </div>
+    <% end %>
+</div>
