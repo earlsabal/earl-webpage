@@ -26,13 +26,6 @@ a:hover {
   background-color: black;
 }
 
-.transbox {
-  margin: 30px;
-  background-color: #000000;
-  border: 1px solid black;
-  opacity: 0.8;
-}
-
 .title {
   display: table;
   height: 100%;
@@ -50,7 +43,8 @@ body {
   background-image: url("ruby-on-rails-custom-1920x1080-wallpaper344192.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-color: #333;
+  background-color: #000;
+  background-attachment: fixed;
 }
 body {
   color: #fff;
@@ -88,6 +82,7 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .masthead-nav > li {
@@ -185,4 +180,11 @@ body {
   .cover-container {
     width: 700px;
   }
+}
+
+.transbox {
+  margin: 30px;
+  background-color: #000000;
+  border: 1px solid black;
+  opacity: 0.8;
 }

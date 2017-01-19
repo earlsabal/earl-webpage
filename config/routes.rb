@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :admin_sessions
 
+  resources :messages
+
   get '/home' => 'pages#home'
   get '/about' => 'pages#about'
 
