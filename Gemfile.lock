@@ -33,7 +33,7 @@ GEM
       activesupport (>= 3.2, < 5.1)
       request_store (~> 1.0)
       scrypt (>= 1.2, < 4.0)
-    autoprefixer-rails (6.5.0)
+    autoprefixer-rails (6.6.1)
       execjs
     bootstrap-sass (3.3.5)
       autoprefixer-rails (>= 5.0.0.1)
@@ -103,7 +103,7 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    simple_form (3.3.1)
+    simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
     sprockets (2.12.4)
