@@ -55,3 +55,7 @@ gem 'authlogic'
 gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails'
+
+group :production, :staging do
+      gem 'rails_12factor'
+end
