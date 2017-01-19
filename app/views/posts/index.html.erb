@@ -1,4 +1,7 @@
-<br /><%= image_tag("Profile Pic.jpg", size: '240x240') %>
+<div align= "left"><%= render "layouts/login" %></div>
+<%= image_tag("Profile Pic.jpg", size: '240x240') %>
+<%= render "layouts/navbar" %>
+
 
   <% @posts.each do |post| %>
     <div class="row">
@@ -11,8 +14,11 @@
 
   <%= will_paginate @comments %>
 
+  
+
   <% if current_admin %>
     <p>
       Admin actions: <%= link_to 'New Post', new_post_path %>
     </p>
   <% end %>
+

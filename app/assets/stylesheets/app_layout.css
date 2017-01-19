@@ -19,6 +19,18 @@ a:hover {
   border: 1px solid #fff;
 }
 
+.post input {
+  background-color: black;
+}
+
+
+
+.title {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: justify;
+}
 
 /*
  * Base structure
@@ -113,11 +125,13 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
+  text-align: center;
 }
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+  background-color: #000000;
+  color: #fff;
 }
 
 

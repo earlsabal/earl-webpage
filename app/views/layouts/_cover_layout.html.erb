@@ -1,0 +1,36 @@
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+      <div class="cover-container">
+
+                
+        <div class="masthead clearfix">
+          <%= render "layouts/navbar" %>
+          <div align= "left"><%= render "layouts/login" %></div>
+        </div>
+       
+        <div class="inner cover">
+          <% if controller_name == 'admin_sessions' && action_name == 'new' %>
+            <%= render "login_form" %>
+          <% else %>
+            <p class="lead">
+              <%= link_to 'My Projects', posts_path,:class => "btn btn-lg btn-default"  %>
+            </p>
+          <% end %>
+
+
+        </div>
+
+
+        <div class="mastfoot">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    

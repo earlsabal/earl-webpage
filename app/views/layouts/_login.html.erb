@@ -1,0 +1,7 @@
+<% if current_admin %>
+	<div class="post">
+		<p><%= button_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+	</div>	
+<% else %>
+	<p><%= link_to 'Login', new_admin_session_path,:class => "btn btn-danger" %></p>
+<% end %>

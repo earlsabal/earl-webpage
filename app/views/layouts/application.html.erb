@@ -1,91 +1,26 @@
 <!DOCTYPE html>
 <html lang= "en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-  
-  <% flash.each do |name, msg| %>
-  	<%= content_tag :p, msg if msg.is_a?(String) %>
-  <% end %>
+  <%= render "layouts/meta_tags" %>
+  <%= render "layouts/flash_msg" %>
 
   <title>Earl Sabal's Webpage</title>
-
-
-    <!-- Bootstrap core CSS -->
-    <%= stylesheet_link_tag("bootstrap.min.css") %>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <%= stylesheet_link_tag("app_layout.css") %>
-
 
 </head>
 <body>
 
 
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-                  
-          <div class="masthead clearfix">
-            <div class="inner">
-              
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <h1 class="cover-heading">My Webpage</h1>
-       
-          <div class="mastfoot">
-            <div class="inner">
-              
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
 
 
 <%= yield %>
 
-
-<div id="container">
-      
-      <% if current_admin %>
-        <p><%= button_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
-      <% else %>
-        <p><%= link_to 'Login', new_admin_session_path %></p>
-      <% end %>
-    </div>
+ 
+    
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="app/vendor/assets/javascripts/jquery.min.js"><\/script>')</script>
-    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<%= render "layouts/javascript" %>
 
 </body>
+
+
 </html>

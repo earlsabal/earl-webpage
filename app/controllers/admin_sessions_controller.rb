@@ -20,6 +20,6 @@ class AdminSessionsController < ApplicationController
   def destroy
   	current_admin_session.destroy
     flash[:notice] = "Logout successful!"
-    redirect_to posts_path
+    redirect_to "/home"
   end
 end
