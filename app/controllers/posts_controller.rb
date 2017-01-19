@@ -53,7 +53,7 @@ class PostsController < ApplicationController
 
 	def login_required
   		unless current_admin
-    		flash[:error] = 'Only logged in admins an access this page.'
+    		flash[:error] = 'Only logged in admins can access this page.'
     		redirect_to posts_path
   		end
 	end

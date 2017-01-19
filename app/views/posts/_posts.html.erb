@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+	<div class="row">
+	  <h2><%= link_to (post.title), post_path(post) %></h2>
+	  <p>
+	    <%= simple_format(truncate(post.body, length: 20)) %>
+	  </p>
+	</div>
+<% end %>
+
+<%= will_paginate @posts %>

@@ -1,0 +1,11 @@
+<% @messages.each do |message| %>
+  <div class="row">
+    <h2><%= message.name %></h2>
+    <p> <%= message.email %></p>
+    <p> <%= message.text %></p>
+    <% @message = message %>
+    <%= render "delete_button" %>
+  </div>
+<% end %>
+
+<%= will_paginate @messages %>

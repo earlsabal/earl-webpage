@@ -1,32 +1,10 @@
+<title>@post.title</title>
+
 <h2><%= @post.title %></h2>
+
 <div class="transbox">
     <p><%= simple_format @post.body %></p>
     <%= render "comments" %>
-
-    <div class="post">
-    <h3>Post Your Comment</h3>
-      <%= simple_form_for([@post, @post.comments.build]) do |f| %>
-        <div class="field">
-          <%= f.label :author %><br />
-          <%= f.text_field :author %>
-        </div>
-        <div class="field">
-          <%= f.label :text %><br />
-          <%= f.text_area :text %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
-    </div>
-
-    <% if current_admin %>
-      <div class="post">
-        <p>
-          Admin Actions: 
-          <%= link_to 'Edit', edit_post_path(@post) %> 
-          <%= button_to 'Delete', post_path(@post), :method => :delete, :confirm => "Are you sure?" %>
-        </p>
-      </div>
-    <% end %>
+    <%= render "post_comment" %>
+    <%= render "admin_options" %>
 </div>

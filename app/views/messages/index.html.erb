@@ -3,14 +3,7 @@
 <h1>My Messages</h1>
 <div class="transbox">
   <% if current_admin %>
-    <% @messages.each do |message| %>
-      <div class="row">
-        <h2><%= message.title %></h2>
-        <p> <%= message.body %></p>
-      </div>
-    <% end %>
-
-    <%= will_paginate @messages %>
+    <%= render "messages" %>
   <% else %>
     <p>You are not authorized to view this information!</p>
   <% end %>
