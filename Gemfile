@@ -49,3 +49,7 @@ gem 'authlogic'
 gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails'
+
+group :development, :test do 
+  gem 'sqlite3'
+end
