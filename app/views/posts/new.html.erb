@@ -1,7 +1,10 @@
 <title>New Post</title>
 
-<h1>Write your new post</h1>
-
 <div class="transbox">
-	<%= render "form" %>
+	<% if current_admin %>
+		<h1>Write your new post</h1>
+		<%= render "form" %>
+	<%= else %>
+		<p>You are not authorized to post on this website</p>
+	<%= end %>
 </div>
