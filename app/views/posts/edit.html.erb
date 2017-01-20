@@ -1,7 +1,9 @@
 <title>Edit Post</title>
-
-<h1><%= "Editing #{@post.title}" %></h1>
-
 <div class="transbox">
-	<%= render "form" %>
+	<% if current_admin %>
+		<h1><%= "Editing #{@post.title}" %></h1>
+		<%= render "form" %>
+	<% else %>
+			<p>You are not authorized to edit or delete posts on this website</p>
+	<%= end %>
 </div>
