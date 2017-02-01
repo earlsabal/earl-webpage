@@ -1,1 +1,0 @@
-Admin.create! :login => 'EarlSabal', :password => 'hello2u2', :password_confirmation => 'hello2u2'
