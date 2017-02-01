@@ -4,7 +4,7 @@
 	<% if current_admin %>
 		<h1>Write your new post</h1>
 		<%= render "form" %>
-	<%= else %>
+	<% else %>
 		<p>You are not authorized to post on this website</p>
-	<%= end %>
+	<% end %>
 </div>
