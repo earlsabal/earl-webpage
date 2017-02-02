@@ -46,8 +46,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    devise (1.1.rc0)
-      warden (~> 0.10.3)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17-x86-mingw32)
@@ -134,8 +132,6 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
-    warden (0.10.7)
-      rack (>= 1.0.0)
     will_paginate (3.1.5)
 
 PLATFORMS
@@ -146,7 +142,6 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
   coffee-rails (~> 4.0.0)
-  devise (= 1.1.rc0)
   jbuilder (~> 2.0)
   jquery-rails
   pg
